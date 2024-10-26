@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión y Formulario</title>
+    <link rel="stylesheet" href="Estilose.css">
+</head>
+<body>
+
+    <div class="container" id="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form id="login-form">
+            <input type="text" id="username-login" placeholder="Nombre de usuario" required>
+            <input type="password" id="password-login" placeholder="Contraseña" required>
+            <button type="button" onclick="login()">Ingresar</button>
+        </form>
+    </div>
+
+    <div class="container" id="form-container" style="display: none;">
+        <h2>Formulario de Registro</h2>
+        <form id="registration-form">
+            <input type="text" id="username" placeholder="Nombre de usuario" required>
+            <input type="text" id="fullname" placeholder="Nombre completo" required>
+            <input type="email" id="email" placeholder="Correo electrónico" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit">registrar</button>
+        </form>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById('username-login').value;
+            var password = document.getElementById('password-login').value;
+
+            if (username && password) {
+                document.getElementById('login-container').style.display = 'none';
+                document.getElementById('form-container').style.display = 'block';
+            } else {
+                alert('Por favor ingresa el nombre de usuario y la contraseña.');
+            }
+        }
+        <button type="submit" >Eregistar</button>
+        registration-form
+    </script>
+
+</body>
+</html>
